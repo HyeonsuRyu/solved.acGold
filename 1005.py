@@ -1,3 +1,4 @@
+#https://www.acmicpc.net/problem/1005
 """입력
 첫째 줄에는 테스트케이스의 개수 T가 주어진다. 각 테스트 케이스는 다음과 같이 주어진다.
 첫째 줄에 건물의 개수 N 과 건물간의 건설순서규칙의 총 개수 K이 주어진다. (건물의 번호는 1번부터 N번까지 존재한다)
@@ -56,14 +57,12 @@ def minTime():
         tmp1, tmp2 = input().split()
         X.append(int(tmp1))
         Y.append(int(tmp2))
-    for i in range(N):
-        buildingTime.append(int(0))
     a = int(input())
 
     for i in range(N):
         buildingTime[i] = buildingTimeCalc(i, X, Y ,K, buildingTime)
 
-    print("answer::",buildingTime[a])
+    print("answer::",buildingTime)
 
 def buildingTimeCalc(N, X, Y, K, buildingTime):
     maxTime = -1
